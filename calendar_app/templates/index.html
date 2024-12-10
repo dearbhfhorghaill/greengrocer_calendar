@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greengrocer Calendar</title>
+</head>
+<body>
+    {% if almost_in_season_list %}
+        <h3>Almost in season</h3>
+        <ul>
+        {% for item in almost_in_season_list %}
+            <li><h4>{{ item }}</h4></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items are available</p>
+    {% endif %}
+
+    {% if in_season_list %}
+        <h3>In season</h3>
+        <ul>
+        {% for item in in_season_list %}
+            <li><h4>{{ item }}</h4></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items are available</p>
+    {% endif %}
+</body>
+</html>
